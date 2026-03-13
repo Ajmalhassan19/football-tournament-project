@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register — eFootball Tournament</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== Navigation ===== -->
+  <nav class="navbar">
+    <div class="nav-brand">eFootball Tournament</div>
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="register.html" class="active">Register</a></li>
+      <li><a href="matches.html">Matches</a></li>
+      <li><a href="leaderboard.html">Leaderboard</a></li>
+      <li><a href="results.html">Results</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== Registration Form ===== -->
+  <section class="section page-section">
+    <div class="container container-sm">
+      <h2 class="section-title">Player Registration</h2>
+      <p class="section-subtitle">Fill in your details to enter the tournament.</p>
+
+      <form id="register-form" class="form-card">
+        <div class="form-group">
+          <label for="name">Player Name</label>
+          <input type="text" id="name" name="name" placeholder="e.g. ProStriker99" required />
+        </div>
+        <div class="form-group">
+          <label for="team">Team Name</label>
+          <input type="text" id="team" name="team" placeholder="e.g. FC Barcelona" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email / Username</label>
+          <input type="text" id="email" name="email" placeholder="e.g. striker@mail.com" required />
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Register</button>
+        <div id="form-message" class="form-message"></div>
+      </form>
+
+      <!-- Registered players list -->
+      <div class="registered-box" id="registered-box">
+        <h3>Registered Players</h3>
+        <ul id="players-list"></ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2026 eFootball Tournament. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

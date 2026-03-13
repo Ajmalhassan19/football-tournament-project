@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Results — eFootball Tournament</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== Navigation ===== -->
+  <nav class="navbar">
+    <div class="nav-brand">eFootball Tournament</div>
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="matches.html">Matches</a></li>
+      <li><a href="leaderboard.html">Leaderboard</a></li>
+      <li><a href="results.html" class="active">Results</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== Match Results ===== -->
+  <section class="section page-section">
+    <div class="container">
+      <h2 class="section-title">Match Results</h2>
+      <p class="section-subtitle">Completed matches with scores and winners.</p>
+
+      <div id="results-container" class="matches-grid">
+        <p class="empty-state">Loading results&hellip;</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Admin Panel (simple result updater) ===== -->
+  <section class="section section-dark page-section">
+    <div class="container container-sm">
+      <h2 class="section-title">Admin — Update Match Result</h2>
+      <form id="admin-form" class="form-card">
+        <div class="form-group">
+          <label for="match-id">Match ID</label>
+          <input type="number" id="match-id" name="matchId" min="1" placeholder="e.g. 1" required />
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="score1">Player 1 Score</label>
+            <input type="number" id="score1" name="score1" min="0" placeholder="0" required />
+          </div>
+          <div class="form-group">
+            <label for="score2">Player 2 Score</label>
+            <input type="number" id="score2" name="score2" min="0" placeholder="0" required />
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Submit Result</button>
+        <div id="admin-message" class="form-message"></div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2026 eFootball Tournament. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
